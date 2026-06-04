@@ -1,10 +1,411 @@
-<!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <title>My test page</title>
-  </head>
-  <body>
-    <p>This is my page</p>
-  </body>
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Optimization -->
+  <title>Aung Aung | Creative Full-Stack Developer & Designer</title>
+  <meta name="description" content="Welcome to the professional portfolio of Aung Aung. Exploring beautiful interfaces, full-stack developments, glassmorphism designs, and custom web applications.">
+  <meta name="keywords" content="Aung Aung, Portfolio, Full-Stack Developer, Web Design, Glassmorphism, JavaScript, Creative developer">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header / Navigation -->
+  <header id="main-header">
+    <div class="container nav-container">
+      <a href="#hero" class="logo" id="nav-logo">Aung Aung.</a>
+      
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="#hero" class="nav-link active" id="link-hero">Home</a></li>
+        <li><a href="#view" class="nav-link" id="link-view">View</a></li>
+        <li><a href="#content" class="nav-link" id="link-content">Content</a></li>
+        <li><a href="#contact" class="nav-link" id="link-contact">Contact</a></li>
+      </ul>
+
+      <div style="display: flex; align-items: center; gap: 16px;">
+        <!-- Theme Toggle Button -->
+        <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle light/dark theme">
+          <!-- Sun Icon for Light Mode -->
+          <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+          <!-- Moon Icon for Dark Mode -->
+          <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+        </button>
+
+        <!-- Hamburger Icon for Mobile -->
+        <div class="hamburger" id="mobile-menu" aria-label="Toggle navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <span class="hero-welcome">Creative Developer</span>
+        <h1 class="hero-title">Designing Web <br><span>Innovations</span> & Ideas</h1>
+        <p class="hero-desc">Hello! I'm Aung Aung, a developer specializing in building beautiful digital user experiences. I balance high-performance backend systems with gorgeous frontend designs.</p>
+        <div class="hero-cta">
+          <a href="#view" class="btn btn-primary" id="cta-view-btn">View My Work</a>
+          <a href="#contact" class="btn btn-secondary" id="cta-contact-btn">Get In Touch</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="avatar-wrapper">
+          <div class="avatar-circle">
+            <img class="avatar-image" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=400&auto=format&fit=crop" alt="Aung Aung profile picture">
+          </div>
+          <div class="avatar-glow"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- View Section (Showcase & Projects Grid) -->
+  <section class="reveal" id="view">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Visual Showcase</span>
+        <h2 class="section-title">Creative Portfolio</h2>
+      </div>
+
+      <!-- Categories Filter -->
+      <div class="view-filters">
+        <button class="filter-btn active" data-filter="all" id="filter-all">All Projects</button>
+        <button class="filter-btn" data-filter="web" id="filter-web">Web Development</button>
+        <button class="filter-btn" data-filter="design" id="filter-design">Design & Graphics</button>
+        <button class="filter-btn" data-filter="creative" id="filter-creative">Creative Tech</button>
+      </div>
+
+      <!-- Projects Cards -->
+      <div class="projects-grid">
+        
+        <!-- Project 1 -->
+        <div class="project-card glass-panel" data-category="web" id="project-ai-vision">
+          <div class="project-img-wrapper">
+            <img class="project-img" src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=800&auto=format&fit=crop" alt="AI Vision Interface project image">
+            <div class="project-overlay">
+              <span class="project-tag">Development</span>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">AI Vision Interface</h3>
+            <p class="project-desc">A deep-learning analysis suite tracking live camera metrics with spatial detection boundaries.</p>
+            <a href="#" class="project-link-btn" data-project="ai-vision" id="details-ai-vision">View Project Details &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card glass-panel" data-category="web" id="project-glass-dashboard">
+          <div class="project-img-wrapper">
+            <img class="project-img" src="https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?q=80&w=800&auto=format&fit=crop" alt="Frosted SaaS Hub project image">
+            <div class="project-overlay">
+              <span class="project-tag">SaaS UI</span>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Frosted SaaS Hub</h3>
+            <p class="project-desc">A premium administrative panel using complex nested grid layouts and glassmorphic panels.</p>
+            <a href="#" class="project-link-btn" data-project="glass-dashboard" id="details-glass-dashboard">View Project Details &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card glass-panel" data-category="creative" id="project-creative-studio">
+          <div class="project-img-wrapper">
+            <img class="project-img" src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=800&auto=format&fit=crop" alt="Creative Agency Portal project image">
+            <div class="project-overlay">
+              <span class="project-tag">WebGL</span>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Creative Agency Portal</h3>
+            <p class="project-desc">A highly-interactive promotional website utilizing custom 3D mesh rendering blocks.</p>
+            <a href="#" class="project-link-btn" data-project="creative-studio" id="details-creative-studio">View Project Details &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="project-card glass-panel" data-category="web" id="project-crypto-visualizer">
+          <div class="project-img-wrapper">
+            <img class="project-img" src="https://images.unsplash.com/photo-1639762681485-074b7f938ba0?q=80&w=800&auto=format&fit=crop" alt="Crypto Pulse Engine project image">
+            <div class="project-overlay">
+              <span class="project-tag">Finance API</span>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Crypto Pulse Engine</h3>
+            <p class="project-desc">Real-time cryptocurrency ticker charting application backed by multi-threaded Web Workers.</p>
+            <a href="#" class="project-link-btn" data-project="crypto-visualizer" id="details-crypto-visualizer">View Project Details &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Project 5 -->
+        <div class="project-card glass-panel" data-category="creative" id="project-neural-network">
+          <div class="project-img-wrapper">
+            <img class="project-img" src="https://images.unsplash.com/photo-1507668077129-56e32842fceb?q=80&w=800&auto=format&fit=crop" alt="Neural Network Sandbox project image">
+            <div class="project-overlay">
+              <span class="project-tag">Education</span>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Neural Network Sandbox</h3>
+            <p class="project-desc">Interactive browser platform for building feedforward mathematical neural networks visually.</p>
+            <a href="#" class="project-link-btn" data-project="neural-network" id="details-neural-network">View Project Details &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Project 6 -->
+        <div class="project-card glass-panel" data-category="design" id="project-zenith-brand">
+          <div class="project-img-wrapper">
+            <img class="project-img" src="https://images.unsplash.com/photo-1626785774573-4b799315345d?q=80&w=800&auto=format&fit=crop" alt="Zenith Branding Identity project image">
+            <div class="project-overlay">
+              <span class="project-tag">Graphics</span>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Zenith Brand Identity</h3>
+            <p class="project-desc">Minimalist print rendering sheets and animated marketing SVGs designed for Zenith.</p>
+            <a href="#" class="project-link-btn" data-project="zenith-brand" id="details-zenith-brand">View Project Details &rarr;</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Content Section (Rich Tabs: Profile, Skills, Timeline) -->
+  <section class="reveal" id="content">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Biography & Skills</span>
+        <h2 class="section-title">Who I Am</h2>
+      </div>
+
+      <div class="glass-panel content-wrapper">
+        <!-- Tabs Navigation -->
+        <div class="tabs-nav">
+          <button class="tab-btn active" data-tab="profile" id="tab-profile-btn">Profile</button>
+          <button class="tab-btn" data-tab="skills" id="tab-skills-btn">Skills</button>
+          <button class="tab-btn" data-tab="timeline" id="tab-timeline-btn">Timeline</button>
+        </div>
+
+        <!-- Tab Panels -->
+        <!-- Tab 1: Profile -->
+        <div class="tab-panel active" id="profile-panel">
+          <div class="profile-panel">
+            <div class="glass-panel profile-card">
+              <div class="profile-avatar">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&auto=format&fit=crop" alt="Aung Aung small profile avatar">
+              </div>
+              <h3 class="profile-name">Aung Aung</h3>
+              <span class="profile-title">Full-Stack Engineer</span>
+            </div>
+            <div class="profile-details">
+              <p>I am a creative full-stack developer committed to creating engaging, modern interfaces. With over 4 years of experience crafting interfaces, I specialize in translating ideas into code that matches structural performance with visual elegance.</p>
+              <p>When I'm not writing lines of code, I enjoy exploring vector illustration, designing responsive web graphics, and staying up to date with modern animation techniques. My goal is to build sites that wow users at first glance while remaining fully functional, responsive, and secure.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 2: Skills -->
+        <div class="tab-panel" id="skills-panel">
+          <div class="skills-grid">
+            <!-- Front End Skills -->
+            <div>
+              <h3 class="skills-category-title">Frontend Engineering</h3>
+              
+              <div class="skill-item">
+                <div class="skill-info"><span>HTML5 / CSS3 / ES6+</span><span>95%</span></div>
+                <div class="skill-bar-bg"><div class="skill-bar-fill" data-skill="95"></div></div>
+              </div>
+
+              <div class="skill-item">
+                <div class="skill-info"><span>React / Next.js / Vue</span><span>90%</span></div>
+                <div class="skill-bar-bg"><div class="skill-bar-fill" data-skill="90"></div></div>
+              </div>
+
+              <div class="skill-item">
+                <div class="skill-info"><span>Responsive Layouts & Glassmorphism</span><span>92%</span></div>
+                <div class="skill-bar-bg"><div class="skill-bar-fill" data-skill="92"></div></div>
+              </div>
+            </div>
+
+            <!-- Back End & Design Skills -->
+            <div>
+              <h3 class="skills-category-title">Backend & Design</h3>
+              
+              <div class="skill-item">
+                <div class="skill-info"><span>Node.js / Express</span><span>88%</span></div>
+                <div class="skill-bar-bg"><div class="skill-bar-fill" data-skill="88"></div></div>
+              </div>
+
+              <div class="skill-item">
+                <div class="skill-info"><span>Databases (MongoDB / SQL)</span><span>85%</span></div>
+                <div class="skill-bar-bg"><div class="skill-bar-fill" data-skill="85"></div></div>
+              </div>
+
+              <div class="skill-item">
+                <div class="skill-info"><span>UI/UX Design (Figma & Illustrator)</span><span>80%</span></div>
+                <div class="skill-bar-bg"><div class="skill-bar-fill" data-skill="80"></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 3: Timeline -->
+        <div class="tab-panel" id="timeline-panel">
+          <div class="timeline">
+            <!-- Item 1 -->
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-date">2024 - Present</div>
+              <div class="glass-panel timeline-card">
+                <h3 class="timeline-title">Lead Frontend Developer</h3>
+                <h4 class="timeline-subtitle">Nexus Digital Studio</h4>
+                <p class="timeline-desc">Responsible for developing high-performance responsive web layouts, standardizing custom CSS utility grids, and collaborating on UI animation specs using Framer Motion and GSAP.</p>
+              </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-date">2022 - 2024</div>
+              <div class="glass-panel timeline-card">
+                <h3 class="timeline-title">Full-Stack Engineer</h3>
+                <h4 class="timeline-subtitle">Nova Tech Solutions</h4>
+                <p class="timeline-desc">Engineered robust server-side APIs, connected relational databases, and built customized administrative control dashboards with frosted glass panels.</p>
+              </div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-date">2020 - 2022</div>
+              <div class="glass-panel timeline-card">
+                <h3 class="timeline-title">Junior Web Developer</h3>
+                <h4 class="timeline-subtitle">Independent Freelancing</h4>
+                <p class="timeline-desc">Designed responsive landing pages, connected contact forms with asynchronous API handlers, and styled custom portfolios for local creative businesses.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="reveal" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Get In Touch</span>
+        <h2 class="section-title">Let's Connect</h2>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Info Card -->
+        <div class="glass-panel contact-info-panel">
+          <div class="contact-card-header">
+            <h3 class="contact-card-title">Let's build something awesome together</h3>
+            <p class="contact-card-desc">Have a project design concept or need a hand with coding? Shoot me a message. I'm always open to discussing new opportunities or design challenges.</p>
+          </div>
+
+          <div class="contact-details-list">
+            <div class="contact-detail-item">
+              <div class="contact-icon-box">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              </div>
+              <div class="contact-detail-text">
+                <h4>Email</h4>
+                <p>aungaung@example.com</p>
+              </div>
+            </div>
+
+            <div class="contact-detail-item">
+              <div class="contact-icon-box">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div class="contact-detail-text">
+                <h4>Location</h4>
+                <p>Seoul, South Korea</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="social-links">
+            <a href="#" class="social-btn" aria-label="GitHub Link">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+            </a>
+            <a href="#" class="social-btn" aria-label="LinkedIn Link">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+            <a href="#" class="social-btn" aria-label="Twitter Link">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Form Card -->
+        <form class="glass-panel contact-form" id="contactForm">
+          <div class="form-group">
+            <label class="form-label" for="name">Your Name</label>
+            <input class="form-input" type="text" id="name" required placeholder="John Doe">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="email">Email Address</label>
+            <input class="form-input" type="email" id="email" required placeholder="john@example.com">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="message">Message</label>
+            <textarea class="form-textarea" id="message" required placeholder="Hello! I would love to talk about a project..."></textarea>
+          </div>
+
+          <button class="btn btn-primary submit-btn" type="submit" id="submit-message-btn">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Details Overlay Modal -->
+  <div class="modal" id="details-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="glass-panel modal-content">
+      <button class="modal-close" aria-label="Close modal">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </button>
+      <div class="modal-body">
+        <img class="modal-img" src="" alt="Project detail image">
+        <h3 class="modal-title" id="modal-title">Project Title</h3>
+        <div class="modal-tags">
+          <!-- Appended dynamically -->
+        </div>
+        <p class="modal-desc">Project details description here.</p>
+        <div class="modal-actions">
+          <a href="#" class="btn btn-primary" id="modal-action-demo">Launch Live Demo</a>
+          <a href="#" class="btn btn-secondary" id="modal-action-source">View Source Code</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-content">
+      <a href="#hero" class="footer-logo">Aung Aung.</a>
+      <p class="footer-text">&copy; 2026 Aung Aung. Built with passion & glassmorphism.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="app.js"></script>
+</body>
 </html>
